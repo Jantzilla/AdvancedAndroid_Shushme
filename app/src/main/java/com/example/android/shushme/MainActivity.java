@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements
         // given a PlaceBuffer will create a Geofence object for each Place using Geofence.Builder
         // and add that Geofence to mGeofenceList
 
-        // TODO (3) Inside Geofencing, implement a private helper method called getGeofencingRequest that
+        // COMPLETED (3) Inside Geofencing, implement a private helper method called getGeofencingRequest that
         // uses GeofencingRequest.Builder to return a GeofencingRequest object from the Geofence list
 
         // TODO (4) Create a GeofenceBroadcastReceiver class that extends BroadcastReceiver and override
