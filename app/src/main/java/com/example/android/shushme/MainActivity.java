@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements
                 .enableAutoManage(this, this)
                 .build();
 
-        // TODO (1) Create a Geofencing class with a Context and GoogleApiClient constructor that
+        // COMPLETE (1) Create a Geofencing class with a Context and GoogleApiClient constructor that
         // initializes a private member ArrayList of Geofences called mGeofenceList
 
         // TODO (2) Inside Geofencing, implement a public method called updateGeofencesList that
