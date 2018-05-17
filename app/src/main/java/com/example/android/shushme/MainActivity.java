@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements
     private PlaceListAdapter mAdapter;
     private RecyclerView mRecyclerView;
     private GoogleApiClient mClient;
+    private Geofencing mGeofencing;
 
     /**
      * Called when the activity is starting
@@ -98,6 +99,8 @@ public class MainActivity extends AppCompatActivity implements
                 .enableAutoManage(this, this)
                 .build();
 
+        mGeofencing = new Geofencing(this,mClient);
+
         // COMPLETE (1) Create a Geofencing class with a Context and GoogleApiClient constructor that
         // initializes a private member ArrayList of Geofences called mGeofenceList
 
@@ -122,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements
         // unregisters all geofences by calling LocationServices.GeofencingApi.removeGeofences
         // using the helper function getGeofencePendingIntent()
 
-        // TODO (8) Create a new instance of Geofencing using "this" as the context and mClient as the client
+        // COMPLETED (8) Create a new instance of Geofencing using "this" as the context and mClient as the client
 
     }
 
