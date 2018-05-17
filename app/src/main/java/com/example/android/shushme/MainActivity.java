@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements
         // COMPLETE (1) Create a Geofencing class with a Context and GoogleApiClient constructor that
         // initializes a private member ArrayList of Geofences called mGeofenceList
 
-        // TODO (2) Inside Geofencing, implement a public method called updateGeofencesList that
+        // COMPLETED (2) Inside Geofencing, implement a public method called updateGeofencesList that
         // given a PlaceBuffer will create a Geofence object for each Place using Geofence.Builder
         // and add that Geofence to mGeofenceList
 
