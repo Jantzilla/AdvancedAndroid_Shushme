@@ -31,6 +31,8 @@ import android.widget.CheckBox;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
@@ -124,10 +126,17 @@ public class MainActivity extends AppCompatActivity implements
         }
         // COMPLETED (1) Create a PlacePicker.IntentBuilder and call startActivityForResult
         PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
-        Intent i = builder.build(this);
+        Intent i = null;
+        try {
+            i = builder.build(this);
+        } catch (GooglePlayServicesRepairableException e) {
+            e.printStackTrace();
+        } catch (GooglePlayServicesNotAvailableException e) {
+            e.printStackTrace();
+        }
         startActivityForResult(i,PLACE_PICKER_REQUEST);
 
-        // TODO (2) Handle GooglePlayServices exceptions
+        // COMPLETED (2) Handle GooglePlayServices exceptions
         Toast.makeText(this, getString(R.string.location_permissions_granted_message), Toast.LENGTH_LONG).show();
     }
 
