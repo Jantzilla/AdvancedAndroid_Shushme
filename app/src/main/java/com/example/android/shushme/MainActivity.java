@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements
 
     //COMPLETED (8) Set the getPlaceById callBack so that onResult calls the Adapter's swapPlaces with the result
 
-    //TODO (2) call refreshPlacesData in GoogleApiClient's onConnected and in the Add New Place button click event
+    //COMPLETED (2) call refreshPlacesData in GoogleApiClient's onConnected and in the Add New Place button click event
 
     /***
      * Called when the Google API Client is successfully connected
@@ -137,6 +137,7 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onConnected(@Nullable Bundle connectionHint) {
         Log.i(TAG, "API Client Connection Successful!");
+        refreshPlacesData();
     }
 
     /***
@@ -210,6 +211,7 @@ public class MainActivity extends AppCompatActivity implements
             ContentValues contentValues = new ContentValues();
             contentValues.put(PlaceContract.PlaceEntry.COLUMN_PLACE_ID, placeID);
             getContentResolver().insert(PlaceContract.PlaceEntry.CONTENT_URI, contentValues);
+            refreshPlacesData();
         }
     }
 
