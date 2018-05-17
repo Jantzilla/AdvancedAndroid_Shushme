@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements
         // registers the GeofencingRequest by calling LocationServices.GeofencingApi.addGeofences
         // using the helper functions getGeofencingRequest() and getGeofencePendingIntent()
 
-        // TODO (7) Inside Geofencing, implement a public method called unRegisterAllGeofences that
+        // COMPLETED (7) Inside Geofencing, implement a public method called unRegisterAllGeofences that
         // unregisters all geofences by calling LocationServices.GeofencingApi.removeGeofences
         // using the helper function getGeofencePendingIntent()
 

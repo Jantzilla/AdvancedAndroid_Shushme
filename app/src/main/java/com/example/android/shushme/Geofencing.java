@@ -52,6 +52,20 @@ public class Geofencing implements ResultCallback<Status> {
         }
     }
 
+    public void unRegisterAllGeofences() {
+        if(mGoogleApiClient == null || !mGoogleApiClient.isConnected()) {
+            return;
+        }
+        try {
+            LocationServices.GeofencingApi.removeGeofences(
+                    mGoogleApiClient,
+                    getGeofencePendingIntent()
+            ).setResultCallback(this);
+        } catch (SecurityException securityException) {
+            Log.e(TAG, securityException.getMessage());
+        }
+    }
+
     public void updateGeofencesList(PlaceBuffer places) {
         mGeofenceList = new ArrayList<>();
         if (places == null || places.getCount() == 0) return;
