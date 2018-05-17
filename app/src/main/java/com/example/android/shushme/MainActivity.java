@@ -117,10 +117,15 @@ public class MainActivity extends AppCompatActivity implements
         }
         PendingResult<PlaceBuffer> placeResult = Places.GeoDataApi.getPlaceById(mClient,
                 guids.toArray(new String[guids.size()]));
-
+        placeResult.setResultCallback(new ResultCallback<PlaceBuffer>() {
+            @Override
+            public void onResult(@NonNull PlaceBuffer places) {
+                mAdapter.swapPlaces(places);
+            }
+        });
     }
 
-    //TODO (8) Set the getPlaceById callBack so that onResult calls the Adapter's swapPlaces with the result
+    //COMPLETED (8) Set the getPlaceById callBack so that onResult calls the Adapter's swapPlaces with the result
 
     //TODO (2) call refreshPlacesData in GoogleApiClient's onConnected and in the Add New Place button click event
 
