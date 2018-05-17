@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements
         // COMPLETED (5) Inside Geofencing, implement a private helper method called getGeofencePendingIntent that
         // returns a PendingIntent for the GeofenceBroadcastReceiver class
 
-        // TODO (6) Inside Geofencing, implement a public method called registerAllGeofences that
+        // COMPLETED (6) Inside Geofencing, implement a public method called registerAllGeofences that
         // registers the GeofencingRequest by calling LocationServices.GeofencingApi.addGeofences
         // using the helper functions getGeofencingRequest() and getGeofencePendingIntent()
 
