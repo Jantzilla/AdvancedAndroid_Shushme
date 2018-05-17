@@ -198,7 +198,9 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public void onResult(@NonNull PlaceBuffer places) {
                 mAdapter.swapPlaces(places);
-                // TODO (11) Call updateGeofenceList and registerAllGeofences if mIsEnabled is true
+                // COMPLETED (11) Call updateGeofenceList and registerAllGeofences if mIsEnabled is true
+                mGeofencing.updateGeofencesList(places);
+                if(mIsEnabled) mGeofencing.registerAllGeofences();
             }
         });
     }
