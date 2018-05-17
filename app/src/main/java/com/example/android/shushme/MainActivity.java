@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements
         // COMPLETED (3) Inside Geofencing, implement a private helper method called getGeofencingRequest that
         // uses GeofencingRequest.Builder to return a GeofencingRequest object from the Geofence list
 
-        // TODO (4) Create a GeofenceBroadcastReceiver class that extends BroadcastReceiver and override
+        // COMPLETED (4) Create a GeofenceBroadcastReceiver class that extends BroadcastReceiver and override
         // onReceive() to simply log a message when called. Don't forget to add a receiver tag in the Manifest
 
         // TODO (5) Inside Geofencing, implement a private helper method called getGeofencePendingIntent that
